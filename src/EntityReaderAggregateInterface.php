@@ -9,7 +9,7 @@ interface EntityReaderAggregateInterface
     /**
      * @template E of object
      * @param class-string<E> $entity
-     * @return EntityReaderInterface<E,mixed>
+     * @return EntityReaderInterface<E>
      */
     public function getReader(string $entity): EntityReaderInterface;
 }

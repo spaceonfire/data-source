@@ -6,8 +6,7 @@ namespace spaceonfire\DataSource;
 
 /**
  * @template E of object
- * @template P
- * @extends EntityReaderInterface<E,P>
+ * @extends EntityReaderInterface<E>
  * @extends EntityPersisterInterface<E>
  */
 interface RepositoryInterface extends EntityReaderInterface, EntityPersisterInterface

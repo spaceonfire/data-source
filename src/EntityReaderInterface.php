@@ -9,13 +9,12 @@ use spaceonfire\Criteria\CriteriaInterface;
 
 /**
  * @template E of object
- * @template P
  */
 interface EntityReaderInterface
 {
     /**
      * Returns entity by its primary field.
-     * @param P $primary
+     * @param mixed $primary
      * @param CriteriaInterface|null $criteria
      * @return E
      * @throws EntityNotFoundException
