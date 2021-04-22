@@ -1,14 +1,12 @@
 {
   "name": "spaceonfire/data-source",
-  "type": "library",
   "description": "Useful interfaces and abstracts to design your domain model",
+  "type": "library",
   "keywords": [
     "DDD",
     "domain",
     "entity",
-    "mapper",
-    "repository",
-    "query"
+    "repository"
   ],
   "homepage": "https://github.com/spaceonfire/data-source",
   "license": "MIT",
@@ -21,31 +19,25 @@
     }
   ],
   "require": {
-    "php": "^7.2|^8.0",
+    "php": "^7.4|^8.0",
     "ext-json": "*",
-    "guzzlehttp/psr7": "^1.6",
-    "jawira/case-converter": "^3.4",
-    "spaceonfire/collection": "^2.5",
-    "spaceonfire/criteria": "^2.5",
-    "spaceonfire/laminas-hydrator-bridge": "^2.5",
-    "webmozart/assert": "^1.6"
+    "spaceonfire/collection": "^3.0",
+    "spaceonfire/common": "^3.0",
+    "spaceonfire/criteria": "^3.0",
+    "spaceonfire/exception": "^3.0",
+    "spaceonfire/value-object": "^3.0",
+    "symfony/translation-contracts": "^2.3",
+    "webmozart/expression": "^1.0",
+    "yiisoft/friendly-exception": "^1.0"
   },
   "require-dev": {
-    "cycle/orm": "^1.4",
-    "cycle/schema-builder": "^1.2",
-    "nette/utils": "^3.0",
-    "ramsey/uuid": "^3.9|^4.0",
-    "roave/security-advisories": "dev-latest",
-    "spaceonfire/value-object": "^2.5",
-    "spiral/pagination": "^2.7"
+    "laminas/laminas-hydrator": "^3.0|^4.0",
+    "phpunit/phpunit": "^9.5",
+    "roave/security-advisories": "dev-latest"
   },
   "suggest": {
-    "spaceonfire/value-object": "",
-    "ramsey/uuid": "",
-    "spiral/pagination": "Needed for QueryInterface",
-    "cycle/orm": "There are adapters available to use with Cycle ORM",
-    "cycle/schema-builder": "There are adapters available to use with Cycle ORM",
-    "nette/utils": ""
+    "laminas/laminas-hydrator": "There are decorator for property hydrator using laminas-hydrator",
+    "spaceonfire/cycle-bridge": "Implementation of data source contracts for Cycle ORM"
   },
   "autoload": {
     "psr-4": {
@@ -55,11 +47,6 @@
   "autoload-dev": {
     "psr-4": {
       "spaceonfire\\DataSource\\": "tests"
-    }
-  },
-  "extra": {
-    "branch-alias": {
-      "dev-master": "2.5-dev"
     }
   },
   "config": {
