@@ -37,7 +37,7 @@ final class LaminasPropertyExtractor implements PropertyExtractorInterface
             if ($extracted === $left) {
                 continue;
             }
-            return $extracted . '.' . $right;
+            return \rtrim($extracted . '.' . $right, '.');
         }
 
         return $name;
